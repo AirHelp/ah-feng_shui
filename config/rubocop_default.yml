@@ -1,0 +1,182 @@
+# You can have a look at the default rubocop configuration here:
+# https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+
+# Run 'gem install rubocop-rspec' if you want to use rubocop-rspec
+require: rubocop-rspec
+
+AllCops:
+  # Exclude anything that isn't really part of our code.
+  # rails_helper is excluded because it's full of solecisms, but it's mostly
+  # generated code and copy-and-pasted snipets from READMEs.
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - '**/vendor/**/*'
+    - '**/db/**/*'
+    - '**/bin/**/*'
+    - '**/*.gemspec'
+    - '**/tmp'
+
+  # Cop names are not displayed in offense messages by default. Change behavior
+  # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
+  # option.
+  DisplayCopNames: true
+  # Style guide URLs are not displayed in offense messages by default. Change
+  # behavior by overriding DisplayStyleGuide, or by giving the
+  # -S/--display-style-guide option.
+  DisplayStyleGuide: true
+  # What version of the Ruby interpreter is the inspected code intended to
+  # run on? (If there is more than one, set this to the lowest version.)
+  TargetRubyVersion: 2.2
+
+# Run rails cops
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Description: >-
+    Commonly used screens these days easily fit more than 80 characters.
+  Max: 120
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/NestedGroups:
+  MaxNesting: 4
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MessageExpectation:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+Metrics/ClassLength:
+  Description: >-
+    Try to keep classes small
+  Max: 300
+
+Metrics/ModuleLength:
+  Max: 1500
+
+# This cop is getting on the way for things like route files and specs, so
+# disabling it. We can rely on other cops for things like method length.
+Metrics/BlockLength:
+  Enabled: false
+
+Style/IndentArray:
+  EnforcedStyle: consistent
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/WordArray:
+  Description: >-
+    Disable the cop that checks for array literals made up of word-like strings,
+    that are not using the %w() syntax.
+  Enabled: false
+
+Style/AlignHash:
+  Description: >-
+    These are the default values but I'm leaving although to remind us if we decide to
+    enforce 'table'.
+  EnforcedHashRocketStyle: key
+  EnforcedColonStyle: key
+
+Style/HashSyntax:
+  Description: >-
+    Mixing the styles looks just silly.
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/AlignParameters:
+  Description: >-
+    Just indent parameters by two spaces. It's less volatile if methods change,
+    and there's less busy work lining things up.
+  EnforcedStyle: with_fixed_indentation
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/Documentation:
+  Description: >-
+    Check with yard instead.
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+
+Style/SpaceAroundEqualsInParameterDefault:
+  Description: >-
+    No space makes the method definition shorter and differentiates
+    from a regular assignment.
+  EnforcedStyle: no_space
+
+Style/MethodCalledOnDoEndBlock:
+  Description: >-
+    do / end blocks should be used for side effects,
+    methods that run a block for side effects and have
+    a useful return value are rare, assign the return
+    value to a local variable for those cases.
+  Enabled: true
+
+Style/SingleLineBlockParams:
+  Description: >-
+    Enforcing the names of variables? To single letter ones? Just no.
+  Enabled: false
+
+Style/StringLiterals:
+  Description: >-
+    Enforce single quotes everywhere except in specs (because there's a lot of
+    human text with apostrophes in spec names, and using double quotes for all
+    of those is more consistent. There shouldn't be much human-readable text in
+    the application code: that is better moved to the locale files.
+  Exclude:
+    - '**/spec/**/*'
+
+Style/ParenthesesAroundCondition:
+  Description: >-
+    Either allow this style or don't. Marking it as safe with parenthesis
+    is silly. Let's try to live without them for now.
+  AllowSafeAssignment: false
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: false
+
+Style/MethodDefParentheses:
+  Description: >-
+                 Checks if the method definitions have or don't have
+                 parentheses.
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#method-parens'
+  Enabled: false
+
+Style/RaiseArgs:
+  Description: >-
+    A specialized exception class will take one or more arguments and construct the message from it.
+    So both variants make sense.
+  Enabled: false
+
+Lint/HandleExceptions:
+  Description: >-
+    Suppressing exceptions can be perfectly fine, and be it to avoid to
+    explicitly type nil into the rescue since that's what you want to return,
+    or suppressing LoadError for optional dependencies
+  Enabled: false
+
+Style/OpMethod:
+  Description: >-
+    This is just silly. Calling the argument `other` in all cases makes no sense.
+  Enabled: false
+
+Style/Next:
+  Enabled: false
