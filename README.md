@@ -8,7 +8,7 @@ In your `Gemfile` add:
 
 ```ruby
 group :development, :test do
-  gem 'AirHelp/ah-ruby_style_guide'
+  gem 'AirHelp/ah-feng_shui'
 end
 ```
 
