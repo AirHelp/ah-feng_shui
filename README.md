@@ -18,6 +18,12 @@ Then install the gem locally:
 $ bundle 
 ```
 
+Note: you propably need to install cmake for this to work
+
+```bash
+$ brew install cmake
+```
+
 ## Usage
 
 Just run pronto using bundler and it will use the correct config:
@@ -45,6 +51,7 @@ Just run pronto using bundler and it will use the correct config:
 ```bash
 $ bundle exec rubocop
 ```
+or
 
 ```bash
 $ bundle exec pronto run -r rubocop
