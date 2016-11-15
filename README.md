@@ -26,7 +26,9 @@ Just run pronto using bundler and it will use the correct config:
 $ bundle exec pronto run
 ```
 
-## Rubocop
+## Set up and run specific runners only
+
+### Rubocop
 
 Create a `.rubocop.yml` file in your project and put this on top of:
 
@@ -36,10 +38,14 @@ inherit_gem:
     - config/rubocop_default.yml
 ```
 
-### Usage
+#### Usage
 
 Just run pronto using bundler and it will use the correct config:
 
 ```bash
 $ bundle exec rubocop
+```
+
+```bash
+$ bundle exec pronto run -r rubocop
 ```
