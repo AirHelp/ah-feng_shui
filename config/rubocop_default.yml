@@ -117,6 +117,12 @@ Style/NumericLiterals:
 Style/SpaceInsideStringInterpolation:
   EnforcedStyle: space
 
+Style/SpaceAroundEqualsInParameterDefault:
+  Description: >-
+    Decided with voting that we should enforce spaces
+    to make code more readable
+  EnforcedStyle: space
+
 Style/MethodCalledOnDoEndBlock:
   Description: >-
     do / end blocks should be used for side effects,
