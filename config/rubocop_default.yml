@@ -1,4 +1,4 @@
-
+# You can have a look at the default rubocop configuration here:
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 
 # Run 'gem install rubocop-rspec' if you want to use rubocop-rspec
@@ -28,11 +28,14 @@ AllCops:
   DisplayStyleGuide: true
   # What version of the Ruby interpreter is the inspected code intended to
   # run on? (If there is more than one, set this to the lowest version.)
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.3
 
 # Run rails cops
 Rails:
   Enabled: true
+
+Rails/HttpPositionalArguments:
+  Enabled: false
 
 Metrics/LineLength:
   Description: >-
