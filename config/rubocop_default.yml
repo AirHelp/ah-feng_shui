@@ -49,7 +49,7 @@ RSpec/DescribedClass:
   Enabled: false
 
 RSpec/NestedGroups:
-  MaxNesting: 4
+  Max: 4
 
 RSpec/MultipleExpectations:
   Enabled: false
