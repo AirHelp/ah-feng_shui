@@ -183,3 +183,10 @@ Style/OpMethod:
 
 Style/Next:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+    This is cop generates a lot of offenses at the moment. We should create a card to
+    fix the offenses and enable this cop if we decide to use frozen string litterals in
+    the future.
+  Enabled: false
