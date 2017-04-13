@@ -64,6 +64,9 @@ RSpec/MessageChain:
 RSpec/LetSetup:
   Enabled: false
 
+Rspec/MessageSpies:
+  EnforcedStyle: 'receive'
+
 Metrics/ClassLength:
   Description: >-
     Try to keep classes small
