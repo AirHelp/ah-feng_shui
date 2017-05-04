@@ -7,10 +7,12 @@ This repository is one place for common resources needed with static code analyz
 In your `Gemfile` add:
 
 ```ruby
-# Configuration for pronto
-gem 'ah-feng_shui',
-  git: 'https://<oauth_token>:x-oauth-basic@github.com/AirHelp/ah-feng_shui',
-  branch: 'master'
+group :test do
+  # Configuration for pronto
+  gem 'ah-feng_shui',
+    git: 'https://<oauth_token>:x-oauth-basic@github.com/AirHelp/ah-feng_shui',
+    branch: 'master'
+end
 ```
 
 Then install the gem locally:
