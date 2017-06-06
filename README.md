@@ -7,15 +7,16 @@ This repository is one place for common resources needed with static code analyz
 In your `Gemfile` add:
 
 ```ruby
-group :development, :test do
-  gem 'AirHelp/ah-feng_shui'
+group :test do
+  # Configuration for pronto
+  gem 'ah-feng_shui', git: 'github.com/AirHelp/ah-feng_shui', branch: 'master'
 end
 ```
 
 Then install the gem locally:
 
 ```bash
-$ bundle 
+$ bundle
 ```
 
 Note: you propably need to install cmake for this to work
@@ -55,4 +56,19 @@ or
 
 ```bash
 $ bundle exec pronto run -r rubocop
+```
+
+### Reek
+
+Copy `config/config-rails.reek` into your project root directory and tweek as needed.
+
+#### Usage
+
+```bash
+$ bundle exec reek
+```
+or
+
+```bash
+$ bundle exec pronto run -r reek
 ```
