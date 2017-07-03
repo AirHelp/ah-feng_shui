@@ -81,10 +81,10 @@ Metrics/ModuleLength:
 Metrics/BlockLength:
   Enabled: false
 
-Style/IndentArray:
+Layout/IndentArray:
   EnforcedStyle: consistent
 
-Style/IndentHash:
+Layout/IndentHash:
   EnforcedStyle: consistent
 
 Style/WordArray:
@@ -93,7 +93,7 @@ Style/WordArray:
     that are not using the %w() syntax.
   Enabled: false
 
-Style/AlignHash:
+Layout/AlignHash:
   Description: >-
     These are the default values but I'm leaving although to remind us if we decide to
     enforce 'table'.
@@ -105,13 +105,13 @@ Style/HashSyntax:
     Mixing the styles looks just silly.
   EnforcedStyle: ruby19_no_mixed_keys
 
-Style/AlignParameters:
+Layout/AlignParameters:
   Description: >-
     Just indent parameters by two spaces. It's less volatile if methods change,
     and there's less busy work lining things up.
   EnforcedStyle: with_fixed_indentation
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
 Style/Documentation:
@@ -122,10 +122,10 @@ Style/Documentation:
 Style/NumericLiterals:
   Enabled: false
 
-Style/SpaceInsideStringInterpolation:
+Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: space
 
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   Description: >-
     Decided with voting that we should enforce spaces
     to make code more readable
