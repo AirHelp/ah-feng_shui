@@ -39,6 +39,10 @@ Rails:
 Rails/HttpPositionalArguments:
   Enabled: false
 
+Rails/FilePath:
+  Exclude:
+    spec/**.rb
+
 Metrics/LineLength:
   Description: >-
     Commonly used screens these days easily fit more than 80 characters.
