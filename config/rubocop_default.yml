@@ -195,3 +195,9 @@ Style/FrozenStringLiteralComment:
     fix the offenses and enable this cop if we decide to use frozen string litterals in
     the future.
   Enabled: false
+
+Style/SymbolArray:
+  Description: >-
+    This cop breaks RoR convention for restricting routes in config/routes.rb with [:regular, :array, :of, :symbols].
+  Exclude:
+    - 'config/routes.rb'
