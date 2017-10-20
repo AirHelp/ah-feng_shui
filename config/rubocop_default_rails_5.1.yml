@@ -51,7 +51,13 @@ RSpec/DescribedClass:
   Enabled: false
 
 RSpec/NestedGroups:
-  Max: 4
+  Enabled: false
+
+RSpec/LeadingSubject:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
 
 RSpec/MultipleExpectations:
   Enabled: false
