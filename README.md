@@ -37,13 +37,16 @@ $ bundle exec pronto run
 
 ### Rubocop
 
-Create a `.rubocop.yml` file in your project and put this on top of:
+Create a `.rubocop.yml` file in your project and make sure it starts with:
 
 ```yml
 inherit_gem:
   ah-feng_shui:
     - config/rubocop_default.yml
 ```
+It can also contain project specific rules to tweeak rubocop for special project needs.
+
+For **Rails 5.1** and above use `rubocop_default_rails_5.1.yml`
 
 #### Usage
 
