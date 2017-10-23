@@ -131,6 +131,9 @@ Style/NumericLiterals:
 Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: space
 
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+
 Layout/SpaceAroundEqualsInParameterDefault:
   Description: >-
     Decided with voting that we should enforce spaces
