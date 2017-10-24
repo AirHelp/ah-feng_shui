@@ -187,7 +187,7 @@ Lint/HandleExceptions:
     or suppressing LoadError for optional dependencies
   Enabled: false
 
-Style/OpMethod:
+Naming/BinaryOperatorParameterName:
   Description: >-
     This is just silly. Calling the argument `other` in all cases makes no sense.
   Enabled: false
