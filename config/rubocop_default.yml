@@ -211,10 +211,3 @@ Style/SymbolArray:
 Style/StringLiterals:
   Description: This lint doesn't make code better.
   Enabled: false
-
-Capybara/FeatureMethods:
-  Description: >-
-    This lint enforces using statements like `let` and `before` within Capybara feature specs,
-    when Capybara encourage to use its own DSL for creating descriptive acceptance tests.
-    Those are `background`, `feature`, `background`, `scenario` & `given`.
-  Enabled: false
