@@ -19,7 +19,7 @@ Then install the gem locally:
 $ bundle
 ```
 
-Note: you propably need to install cmake for this to work
+Note: you probably need to install cmake for this to work
 
 ```bash
 $ brew install cmake
@@ -44,9 +44,9 @@ inherit_gem:
   ah-feng_shui:
     - config/rubocop_default.yml
 ```
-It can also contain project specific rules to tweeak rubocop for special project needs.
+It can also contain project specific rules to tweak Rubocop for special project needs.
 
-For **Rails 5.1** and above use `rubocop_default_rails_5.1.yml`
+For **Rubocop 0.51** and above use `rubocop_default_rails_5.1.yml`
 
 #### Usage
 
@@ -63,7 +63,7 @@ $ bundle exec pronto run -r rubocop
 
 ### Reek
 
-Copy `config/config-rails.reek` into your project root directory and tweek as needed.
+Copy `config/config-rails.reek` into your project root directory and tweak as needed.
 
 #### Usage
 
