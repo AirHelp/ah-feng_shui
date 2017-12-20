@@ -208,3 +208,11 @@ Capybara/FeatureMethods:
     when Capybara encourage to use its own DSL for creating descriptive acceptance tests.
     Those are `background`, `feature`, `background`, `scenario` & `given`.
   Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - integration
+    - staging
+    - production
