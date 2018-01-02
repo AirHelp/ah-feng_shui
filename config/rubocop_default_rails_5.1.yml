@@ -216,3 +216,9 @@ Rails/UnknownEnv:
     - integration
     - staging
     - production
+
+RSpec/ContextWording:
+  Description: >-
+    We want to have our contexts described freely, we want to use `and` and other starting words instead of
+    basic `when`, `with`, `without` this cop forces
+  Enabled: false
