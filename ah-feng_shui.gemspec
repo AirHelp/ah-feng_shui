@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
 
   # Pronto runners
-  spec.add_runtime_dependency 'pronto', '~> 0.9.4'
+  spec.add_runtime_dependency 'pronto'
   spec.add_runtime_dependency 'pronto-rubocop'
   spec.add_runtime_dependency 'pronto-brakeman'
   spec.add_runtime_dependency 'pronto-flay'
