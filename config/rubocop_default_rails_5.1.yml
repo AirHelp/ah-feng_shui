@@ -220,5 +220,16 @@ Rails/UnknownEnv:
 RSpec/ContextWording:
   Description: >-
     We want to have our contexts described freely, we want to use `and` and other starting words instead of
-    basic `when`, `with`, `without` this cop forces
+    basic `when`, `with`, `without` this cop forces.
+  Enabled: false
+
+RSpec/PredicateMatcher:
+  Description: >-
+    This lint enforces using predicate matcher over using predicate method directly.
+      bad  -> expect(claim.eligible?).to be_truthy
+      good -> expect(claim).to be_eligible
+    Let's consider another example though:
+      bad  -> expect(mailbox.was_scan_completed?).to be_truthy
+      good -> expect(mailbox).to be_was_completed
+    Does it improve anything? I don't think so.
   Enabled: false
