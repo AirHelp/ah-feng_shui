@@ -74,6 +74,9 @@ RSpec/LetSetup:
 RSpec/MessageSpies:
   EnforcedStyle: 'receive'
 
+RSpec/ExpectInHook:
+  Enabled: false
+
 Metrics/ClassLength:
   Description: >-
     Try to keep classes small
