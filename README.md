@@ -75,3 +75,36 @@ or
 ```bash
 $ bundle exec pronto run -r reek
 ```
+
+#### Configure Rubocop severity levels
+
+To configure Rubocop severities you need to provide patched `pronto-rubocop` gem from [Airhelp forked repository](https://github.com/AirHelp/pronto-rubocop).
+
+In your Gemfile:
+
+```Ruby
+gem 'pronto-rubocop', git: 'https://github.com/AirHelp/pronto-rubocop'
+gem 'ah-feng_shui', git: 'https://github.com/AirHelp/ah-feng_shui'
+```
+
+Then you are allowed to adjust severities in `.pronto.yml` file in your app repository:
+
+```YAML
+rubocop:
+  severities:
+    refactor: info
+    convention: info
+    warning: warning
+    error: error
+    fatal: fatal
+```
+(Default level is `warning` for all)
+
+Example of altering Rubocop severity in `.rubocop.yml` file:
+
+```YAML
+Rails/SkipsModelValidations:
+  Severity: fatal
+  Exclude:
+    - 'spec/**/*.rb'
+```
