@@ -9,7 +9,7 @@ In your `Gemfile` add:
 ```ruby
 group :test do
   # Configuration for pronto
-  gem 'ah-feng_shui', git: 'github.com/AirHelp/ah-feng_shui', branch: 'master'
+  gem 'ah-feng_shui', git: 'https://github.com/AirHelp/ah-feng_shui', branch: 'master'
 end
 ```
 
