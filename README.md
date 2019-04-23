@@ -4,12 +4,17 @@ This repository is one place for common resources needed with static code analyz
 
 ## Installation
 
+Preferred way:
+In your `Gemfile` add all the feng-shui dependencies, without actually using this gem. 
+Example can be found [here](https://github.com/AirHelp/ah-mama/pull/183/files#diff-8b7db4d5cc4b8f6dc8feb7030baa2478R84).
+
+The old way:
 In your `Gemfile` add:
 
 ```ruby
 group :test do
   # Configuration for pronto
-  gem 'ah-feng_shui', git: 'github.com/AirHelp/ah-feng_shui', branch: 'master'
+  gem 'ah-feng_shui', git: 'https://github.com/AirHelp/ah-feng_shui', branch: 'master'
 end
 ```
 
