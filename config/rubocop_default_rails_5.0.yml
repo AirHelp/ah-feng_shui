@@ -2,7 +2,10 @@
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 
 # Run 'gem install rubocop-rspec' if you want to use rubocop-rspec
-require: rubocop-rspec
+# Run 'gem install rubocop-performance' if you want to use rubocop-performance
+require:
+  - 'rubocop-rspec'
+  - 'rubocop-performance'
 
 AllCops:
   # Exclude anything that isn't really part of our code.
